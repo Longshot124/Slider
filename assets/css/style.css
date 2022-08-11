@@ -16,6 +16,26 @@
 
 }
 
+.slider-dots {
+    border-radius: 100%;
+    position: absolute;
+    bottom: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+
+
+}
+
+.slider-dots i {
+    transition: .3s;
+}
+
+.slider-dots :hover {
+    color: #fff;
+}
+
+
 .next,
 .previous {
     position: absolute;

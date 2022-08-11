@@ -12,6 +12,9 @@ img.src = sliderImg[sliderNum]
 let next = document.querySelector('.next')
 let previous = document.querySelector('.previous')
 
+
+
+
 next.addEventListener('click', () => {
     sliderNum++;
 
@@ -32,6 +35,24 @@ previous.addEventListener('click', () => {
     img.src = sliderImg[sliderNum];
 })
 
+let dots = document.querySelectorAll('.slider-dots i')
+for(let dot of dots){
+    dot.addEventListener('click',()=>{
+        let active = document.querySelector('.active')
+        active.classList.remove('active')
+        dot.classList.add('active')
+       let dotId =  dot.getAttribute('id')
+        if (dotId==1 ) {
+            img.src=sliderImg[0]
+        }
+        if (dotId==2 ) {
+            img.src=sliderImg[1]
+        }
+        if (dotId==3) {
+            img.src=sliderImg[2]
+        }
+    })
+}
 function AutoPlay() {
     sliderNum++;
 
